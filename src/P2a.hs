@@ -32,4 +32,4 @@ main = interact
       . splitOn ", " )
     . splitOn "; "
     . drop 2 . dropWhile (/= ':'))
-  . lines
+  . filter (not . null) . lines

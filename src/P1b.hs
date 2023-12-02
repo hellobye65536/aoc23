@@ -31,4 +31,10 @@ munch s@(_ : t)
   | otherwise = munch t
 
 main :: IO ()
-main = interact $ show . sum . map (((+) <$> ((* 10) . head) <*> last) . filter (/=0) . munch) . filter (not . null) . lines
+main = interact
+  $ show
+  . sum
+  . map
+    ( ((+) <$> ((* 10) . head) <*> last)
+    . munch)
+  . filter (not . null) . lines

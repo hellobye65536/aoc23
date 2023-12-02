@@ -1,5 +1,3 @@
-{-# LANGUAGE TypeApplications #-}
-
 module Main where
 
 import Data.List.Split (splitOn)
@@ -21,14 +19,14 @@ maxColor (r, g, b) (i, c) = case c of
 
 main :: IO ()
 main = interact
-  $ show @Int
+  $ show
   . sum
   . map
     ( (\(r,g,b) -> r*g*b)
     . foldl' maxColor (0,0,0)
     . concatMap
-      ( map ((\[i,c] -> (read @Int i, parseColor c)) . words)
+      ( map ((\[i,c] -> (read i, parseColor c)) . words)
       . splitOn ", " )
     . splitOn "; "
     . drop 2 . dropWhile (/= ':'))
-  . lines
+  . filter (not . null) . lines
