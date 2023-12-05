@@ -37,6 +37,7 @@ executable p2a
     ghc-options:
         -Wall
         -Wno-name-shadowing
+        -Wno-incomplete-uni-patterns
 
     build-depends:
         base  ^>=4.17.2.0,
@@ -49,6 +50,7 @@ executable p2b
     ghc-options:
         -Wall
         -Wno-name-shadowing
+        -Wno-incomplete-uni-patterns
 
     build-depends:
         base  ^>=4.17.2.0,
@@ -97,6 +99,7 @@ executable p4b
     ghc-options:
         -Wall
         -Wno-name-shadowing
+        -Wno-incomplete-uni-patterns
 
     build-depends:
         base  ^>=4.17.2.0,
