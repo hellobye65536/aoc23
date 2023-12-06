@@ -117,3 +117,16 @@ executable p5a
     build-depends:
         base  ^>=4.17.2.0,
         split ^>=0.2.4,
+
+executable p5b
+    default-language: Haskell2010
+    hs-source-dirs:   src
+    main-is:          P5b.hs
+    ghc-options:
+        -Wall
+        -Wno-name-shadowing
+        -Wno-incomplete-uni-patterns
+
+    build-depends:
+        base  ^>=4.17.2.0,
+        split ^>=0.2.4,
