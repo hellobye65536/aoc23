@@ -156,3 +156,16 @@ executable p6b
     build-depends:
         base  ^>=4.17.2.0,
         split ^>=0.2.4,
+
+executable p7a
+    default-language: Haskell2010
+    hs-source-dirs:   src
+    main-is:          P7a.hs
+    ghc-options:
+        -Wall
+        -Wno-name-shadowing
+        -Wno-incomplete-uni-patterns
+
+    build-depends:
+        base  ^>=4.17.2.0,
+        split ^>=0.2.4,
